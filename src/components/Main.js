@@ -5,9 +5,12 @@ const Main = () => {
         <div id='mainContainer'>
             <div id='main'>
                 <div id="chatList">
-                    <div id="statusBar">
+                    <div id="statusBar" className='flex'>
                         <div id="profilePhoto">
                             <img src={require("./profilePhoto.png")} alt="" />
+                        </div>
+                        <div id="status">
+                            <img src={require("./status.png")} alt="" />
                         </div>
                     </div>
                     <div id="searchBar">

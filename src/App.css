@@ -38,6 +38,11 @@
   }
 }
 
+
+.flex {
+  display: flex;
+}
+
 #bkg_top_banner {
   height: 16vh;
   width: 100vw;
@@ -69,12 +74,23 @@
 
 
 #chatList {
-  width: 33%;
+  width: 30%;
   background-color: #ffffff;
 }
 
 #statusBar {
-  height: 7%;
+  box-sizing: border-box;
+  height: 8%;
   width: 100%;
   border: 1px solid black;
+  align-items: center;
+  padding: 0 3%;
+}
+
+#profilePhoto {
+  height: 80%;
+}
+
+#profilePhoto img {
+  max-height: 100%;
 }
