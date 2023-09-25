@@ -32,7 +32,49 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+#bkg_top_banner {
+  height: 16vh;
+  width: 100vw;
+  background-color: #00a884;
+}
+
+#bkg_main {
+  height: 84vh;
+  width: 100vw;
+  background: linear-gradient(#e7e4de, rgba(209, 215, 219, 255));
+}
+
+#mainContainer {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main {
+  display: flex;
+  width: 97vw;
+  height: 97vh;
+  background-color: #f0f2f5;
+}
+
+
+#chatList {
+  width: 33%;
+  background-color: #ffffff;
+}
+
+#statusBar {
+  height: 7%;
+  width: 100%;
+  border: 1px solid black;
 }
