@@ -12,27 +12,31 @@ const Main = () => {
                         </div>
 
                         <div className='flex' id='statusSection'>
-                            <div id="communities">
-                                <img src={require("./communities.png")} alt="" />
-                            </div>
-                            <div id="status">
-                                <img src={require("./status.png")} alt="" />
-                            </div>
-                            <div id="channels">
-                                <img src={require("./channels.png")} alt="" />
-                            </div>
-                            <div id="newChat">
-                                <img src={require("./newChat.png")} alt="" />
-                            </div>
-                            <div id="menu">
-                                <img src={require("./menu.png")} alt="" />
-                            </div>
+                            {/* <div id="communities"> */}
+                            <img src={require("./communities.png")} alt="" />
+                            {/* </div> */}
+                            {/* <div id="status"> */}
+                            <img src={require("./status.png")} alt="" />
+                            {/* </div> */}
+                            {/* <div id="channels"> */}
+                            <img src={require("./channels.png")} alt="" />
+                            {/* </div> */}
+                            {/* <div id="newChat"> */}
+                            <img src={require("./newChat.png")} alt="" />
+                            {/* </div> */}
+                            {/* <div id="menu"> */}
+                            <img src={require("./menu.png")} alt="" />
+                            {/* </div> */}
                         </div>
                     </div>
-                    <div id="searchBar">
-
+                    <div id="searchBar" className='flex'>
+                        <div className='flex'>
+                            <img src={require("./magnifying_glass.png")} alt="" />
+                            <input type="text" name="chatName" id="chatSearch" placeholder='Search or start new chat' />
+                        </div>
+                        <img src={require("./filters.png")} alt="" id='filter'/>
                     </div>
-                    <div id="chatList">
+                    <div id="chats">
 
                     </div>
                 </div>

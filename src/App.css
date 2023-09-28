@@ -69,7 +69,7 @@
   display: flex;
   width: 97vw;
   height: 97vh;
-  background-color: #f0f2f5;
+  background-color: rgb(240, 242, 245);
 }
 
 
@@ -82,20 +82,24 @@
   box-sizing: border-box;
   height: 8%;
   width: 100%;
-  border: 1px solid black;
   justify-content: space-between;
   align-items: center;
   padding: 0 3%;
+  background-color: #f0f2f5;
 }
 
 #profilePhoto {
-  height: 80%;
+  height: 70%;
+}
+
+#profilePhoto img {
+  height: 100%;
 }
 
 #statusSection {
   height: 100%;
 
-  width: 50%;
+  width: 60%;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -110,9 +114,58 @@
 }
 
 #statusSection img {
-  height: 100%;
-  /* width: 24px; */
+  height: 30%;
   display: block;
   margin: auto;
-  /* aspect-ratio: 1/1; */
+}
+
+#topNav img:hover {
+  cursor: pointer;
+}
+
+
+#messages {
+  border-left: 1px solid rgb(233, 237, 239);
+}
+
+
+#searchBar {
+  height: 6.7%;
+  /* border: 1px solid black; */
+  align-items: center;
+  border-bottom: 1px solid rgb(233, 237, 239);
+}
+
+#searchBar div {
+  height: 73%;
+  width: 87%;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  margin: 0 3%;
+  align-items: center;
+  background-color: rgb(240, 242, 245);
+}
+
+#searchBar div img {
+  height: 40%;
+  margin: 0 4%;
+}
+
+#searchBar input {
+  background: none;
+  border: none;
+  color: rgb(59, 74, 84);
+  width: 80%;
+  margin-left: 2%;
+  outline: none;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
+}
+
+#searchBar input::placeholder {
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
+  font-size: larger;
+}
+
+#searchBar>img {
+  height: 22%;
 }
