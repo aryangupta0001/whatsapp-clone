@@ -29,13 +29,17 @@ const Main = () => {
                             {/* </div> */}
                         </div>
                     </div>
+
                     <div id="searchBar" className='flex'>
                         <div className='flex'>
                             <img src={require("./magnifying_glass.png")} alt="" />
                             <input type="text" name="chatName" id="chatSearch" placeholder='Search or start new chat' />
+                            <img src={require("./erase_search.png")} alt="" />
                         </div>
-                        <img src={require("./filters.png")} alt="" id='filter'/>
+                        <img src={require("./filters.png")} alt="" id='filter' />
+
                     </div>
+
                     <div id="chats">
 
                     </div>
