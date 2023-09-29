@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Main = () => {
+
+    const [chatSearch, setChatSearch] = useState("");
+    
+    const onChange = (e) => {
+        try {
+            setChatSearch(e.target.value);
+        }
+        catch { }
+
+        if (chatSearch.length === 0) {
+            document.getElementById("clearChatSearch").style.display = "none";
+        }
+        else {
+            document.getElementById("clearChatSearch").style.display = "block";
+        }
+
+        console.log(chatSearch.length);
+    }
+
     return (
         <div id='mainContainer'>
             <div id='main'>
@@ -33,8 +52,8 @@ const Main = () => {
                     <div id="searchBar" className='flex'>
                         <div className='flex'>
                             <img src={require("./magnifying_glass.png")} alt="" />
-                            <input type="text" name="chatName" id="chatSearch" placeholder='Search or start new chat' />
-                            <img src={require("./erase_search.png")} alt="" />
+                            <input type="text" name="chatName" id="chatSearch" placeholder='Search or start new chat' value={chatSearch} onChange={onChange} />
+                            <img src={require("./erase_search.png")} alt="" id='clearChatSearch' onClick={() => { setChatSearch("") }} />
                         </div>
                         <img src={require("./filters.png")} alt="" id='filter' />
 
