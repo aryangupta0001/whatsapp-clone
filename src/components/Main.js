@@ -93,7 +93,10 @@ const Main = () => {
                         </div>
                     </div>
 
-                    <p>Your personal messages are end-to-end encrypted</p>
+                    <div className='flex' id='encryptionMsg'>
+                        <img src={require("./lock.png")} alt="" />
+                        <p>Your personal messages are end-to-end encrypted</p>
+                    </div>
                 </div>
             </div>
         </div >

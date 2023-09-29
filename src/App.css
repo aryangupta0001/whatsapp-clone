@@ -265,7 +265,9 @@
   transition-timing-function: ease-out
 }
 
-#messages>p {
+#encryptionMsg {
+  height: 3%;
+  flex-direction: row;
   position: relative;
   bottom: 5px;
   left: 0%;
@@ -273,4 +275,8 @@
   margin-bottom: 4%;
   font-size: 14px;
   color: rgb(134, 150, 160);
+}
+
+#encryptionMsg img {
+  max-height: 100%;
 }
