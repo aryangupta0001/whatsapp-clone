@@ -10,8 +10,6 @@ const Main = () => {
         } else {
             document.getElementById("clearChatSearch").style.display = "block";
         }
-
-        console.log(chatSearch.length);
     }, [chatSearch]);
 
     const onChange = async (e) => {
