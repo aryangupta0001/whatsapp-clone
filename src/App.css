@@ -76,7 +76,7 @@
   justify-content: center;
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
@@ -204,6 +204,7 @@
 
 #chats {
   height: 79.3%;
+  overflow-y: scroll;
 }
 
 
@@ -273,4 +274,11 @@
 
 #messageSecWall>div+div img {
   width: auto;
+  height: 45%;
+  margin-right: 5px;
+  align-self: center;
+}
+
+#profileImg {
+  width: 15%;
 }

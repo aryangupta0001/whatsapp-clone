@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Chat from './Chat';
 
 const Main = () => {
 
@@ -16,20 +17,82 @@ const Main = () => {
         setChatSearch(e.target.value);
     }
 
-    const chatList = {
-        "Abhisek Tamang": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Abhisek Tamang.jpg",
-        "ANDREW LINDER": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/ANDREW LINDER.jpg",
-        "Jonah Hill": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Jonah Hill.webp",
-        "Chris Evans": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Chris Evans.jpg",
-        "Sandeep Nainwal": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Sandeep Nainwal.jpg",
-        "Michael": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Michael.jpg",
-        "Johnny Depp": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Johnny Depp.webp",
-        "Hani Abdel-Warith": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Hani Abdel-Warith.jpeg",
-        "Chris Pratt": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Chris Pratt.avif",
-        "Ramit Sethi": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Ramit Sethi.jpg",
-        "Rocco Giannetti": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Rocco Giannetti.jpg",
-        "Will Smith": "E:/RANBEER/CODE/WEB DEV/MERN/REACT/whatsapp-clone/src/components/chats/Will Smith.jpg"
-    }
+    const chatList = [
+
+        {
+            id: 1,
+            name: "Abhisek Tamang",
+            img: "./chats/Abhisek.jpg"
+        },
+
+        {
+            id: 2,
+            name: "ANDREW LINDER",
+            img: "./chats/ANDREW LINDER.jpg"
+        },
+
+        {
+            id: 3,
+            name: "Jonah Hill",
+            img: "./chats/Jonah Hill.webp"
+        },
+
+        {
+            id: 4,
+            name: "Chris Evans",
+            img: "./chats/Chris Evans.jpg"
+        },
+
+        {
+            id: 5,
+            name: "Sandeep Nainwal",
+            img: "./chats/Sandeep Nainwal.jpg"
+        },
+
+        {
+            id: 6,
+            name: "Michael",
+            img: "./chats/Michael.jpg"
+        },
+
+        {
+            id: 7,
+            name: "Johnny Depp",
+            img: "./chats/Johnny Depp.webp"
+        },
+
+        {
+            id: 8,
+            name: "Hani Abdel-Warith",
+            img: "./chats/Hani Abdel-Warith.jpeg"
+        },
+
+        {
+            id: 9,
+            name: "Chris Pratt",
+            img: "./chats/Chris Pratt.avif"
+        },
+
+        {
+            id: 10,
+            name: "Ramit Sethi",
+            img: "./chats/Ramit Sethi.jpg"
+        },
+
+        {
+            id: 11,
+            name: "Rocco Giannetti",
+            img: "./chats/Rocco Giannetti.jpg"
+        },
+
+        {
+            id: 12,
+            name: "Will Smith",
+            img: "./chats/Will Smith.jpg"
+        }
+
+
+    ]
 
     return (
         <div id='mainContainer' className='flexHCenter flexVCenter'>
@@ -71,8 +134,14 @@ const Main = () => {
                         </div>
                     </div>
 
-                    <div id="chats" className='pointer'>
-
+                    <div id="chats" className='pointer w100'>
+                        {
+                            chatList.map(
+                                (chat) => (
+                                    <Chat key={chat.id} name={chat.name} img={chat.img} />
+                                )
+                            )
+                        }
                     </div>
                 </div>
 
