@@ -22,7 +22,7 @@ const Main = () => {
         {
             id: 1,
             name: "Abhisek Tamang",
-            img: "./chats/Abhisek.jpg"
+            img: "./chats/Abhisek Tamang.jpg"
         },
 
         {
