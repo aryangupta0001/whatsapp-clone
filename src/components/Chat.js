@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react';
+// import Context from '../context/Context';
+
 
 const Chat = (props) => {
-    // const imgPath = "./chats/" + props.name;
-    console.log(props.name);
-    console.log(props.img);
-    console.log("./chats/" + props.name + ".jpg");
+
+    useEffect(() => {
+        const profileImg = document.getElementById("profileImg");
+        profileImg.style.width = profileImg.offsetHeight;
+    }, [])
     return (
-        <div className='flex'>
-            <div id="profileImg">
-                <img src={"./chats/" + props.name + ".jpg"} alt="" style={{ height: "100px", width: "100px" }} />
+        <div id='chat' className='flex'>
+            <div id="profileImg" >
+                <img src={props.img} alt="" className='h100' />
             </div>
 
             <div>

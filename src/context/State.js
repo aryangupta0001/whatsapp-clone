@@ -3,11 +3,11 @@ import Context from './Context';
 
 
 const State = (props) => {
-    const [chatsImg, setChatImg] = useState([]);
+    const [chatImg, setChatImg] = useState([]);
 
     return (
-        <Context.Provider value={{ chatsImg, setChatImg }}>
-            {props.childrean}
+        <Context.Provider value={{ chatImg, setChatImg }}>
+            {props.children}
         </Context.Provider>
     )
 }

@@ -1,15 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Chat from './Chat';
+// import Context from "../context/Context";
 
 const Main = () => {
 
+    // const context = useContext(Context);
+
+    // const { setChatImg } = context;
+
     const [chatSearch, setChatSearch] = useState("");
+    const [clearChatSearchVisible, setClearChatSearchVisible] = useState(false);
 
     useEffect(() => {
         if (chatSearch.length === 0) {
-            document.getElementById("clearChatSearch").style.display = "none";
-        } else {
-            document.getElementById("clearChatSearch").style.display = "block";
+            setClearChatSearchVisible(false);
+        }
+
+        else {
+            setClearChatSearchVisible(true);
         }
     }, [chatSearch]);
 
@@ -17,78 +25,156 @@ const Main = () => {
         setChatSearch(e.target.value);
     }
 
+
+    // setChatImg([
+
+    //     {
+    //         id: 1,
+    //         name: "Abhisek Tamang",
+    //         img: "/assets/images/chats/Abhisek Tamang.jpg"  
+    //     },
+
+    //     {
+    //         id: 2,
+    //         name: "ANDREW LINDER",
+    //         img: "/assets/images/chats/ANDREW LINDER.jpg"
+    //     },
+
+    //     {
+    //         id: 3,
+    //         name: "Jonah Hill",
+    //         img: "/assets/images/chats/Jonah Hill.webp"
+    //     },
+
+    //     {
+    //         id: 4,
+    //         name: "Chris Evans",
+    //         img: "/assets/images/chats/Chris Evans.jpg"
+    //     },
+
+    //     {
+    //         id: 5,
+    //         name: "Sandeep Nainwal",
+    //         img: "/assets/images/chats/Sandeep Nainwal.jpg"
+    //     },
+
+    //     {
+    //         id: 6,
+    //         name: "Michael",
+    //         img: "/assets/images/chats/Michael.jpg"
+    //     },
+
+    //     {
+    //         id: 7,
+    //         name: "Johnny Depp",
+    //         img: "/assets/images/chats/Johnny Depp.webp"
+    //     },
+
+    //     {
+    //         id: 8,
+    //         name: "Hani Abdel-Warith",
+    //         img: "/assets/images/chats/Hani Abdel-Warith.jpeg"
+    //     },
+
+    //     {
+    //         id: 9,
+    //         name: "Chris Pratt",
+    //         img: "/assets/images/chats/Chris Pratt.avif"
+    //     },
+
+    //     {
+    //         id: 10,
+    //         name: "Ramit Sethi",
+    //         img: "/assets/images/chats/Ramit Sethi.jpg"
+    //     },
+
+    //     {
+    //         id: 11,
+    //         name: "Rocco Giannetti",
+    //         img: "/assets/images/chats/Rocco Giannetti.jpg"
+    //     },
+
+    //     {
+    //         id: 12,
+    //         name: "Will Smith",
+    //         img: "/assets/images/chats/Will Smith.jpg"
+    //     }
+
+
+    // ]);
+
     const chatList = [
 
         {
             id: 1,
             name: "Abhisek Tamang",
-            img: "./chats/Abhisek Tamang.jpg"
+            img: "/assets/images/chats/Abhisek Tamang.jpg"
         },
 
         {
             id: 2,
             name: "ANDREW LINDER",
-            img: "./chats/ANDREW LINDER.jpg"
+            img: "/assets/images/chats/ANDREW LINDER.jpg"
         },
 
         {
             id: 3,
             name: "Jonah Hill",
-            img: "./chats/Jonah Hill.webp"
+            img: "/assets/images/chats/Jonah Hill.webp"
         },
 
         {
             id: 4,
             name: "Chris Evans",
-            img: "./chats/Chris Evans.jpg"
+            img: "/assets/images/chats/Chris Evans.jpg"
         },
 
         {
             id: 5,
             name: "Sandeep Nainwal",
-            img: "./chats/Sandeep Nainwal.jpg"
+            img: "/assets/images/chats/Sandeep Nainwal.jpg"
         },
 
         {
             id: 6,
             name: "Michael",
-            img: "./chats/Michael.jpg"
+            img: "/assets/images/chats/Michael.jpg"
         },
 
         {
             id: 7,
             name: "Johnny Depp",
-            img: "./chats/Johnny Depp.webp"
+            img: "/assets/images/chats/Johnny Depp.webp"
         },
 
         {
             id: 8,
             name: "Hani Abdel-Warith",
-            img: "./chats/Hani Abdel-Warith.jpeg"
+            img: "/assets/images/chats/Hani Abdel-Warith.jpg"
         },
 
         {
             id: 9,
             name: "Chris Pratt",
-            img: "./chats/Chris Pratt.avif"
+            img: "/assets/images/chats/Chris Pratt.avif"
         },
 
         {
             id: 10,
             name: "Ramit Sethi",
-            img: "./chats/Ramit Sethi.jpg"
+            img: "/assets/images/chats/Ramit Sethi.jpg"
         },
 
         {
             id: 11,
             name: "Rocco Giannetti",
-            img: "./chats/Rocco Giannetti.jpg"
+            img: "/assets/images/chats/Rocco Giannetti.jpg"
         },
 
         {
             id: 12,
             name: "Will Smith",
-            img: "./chats/Will Smith.jpg"
+            img: "/assets/images/chats/Will Smith.jpg"
         }
 
 
@@ -117,7 +203,8 @@ const Main = () => {
                         <div className='flexVCenter'>
                             <img src={require("./icons/magnifying_glass.png")} alt="" />
                             <input type="text" name="chatName" id="chatSearch" placeholder='Search or start new chat' value={chatSearch} onChange={onChange} className='fFamily1' />
-                            <img src={require("./icons/erase_search.png")} alt="" id='clearChatSearch' onClick={() => { setChatSearch("") }} />
+
+                            <img src={require("./icons/erase_search.png")} alt="" id='clearChatSearch' onClick={() => { setChatSearch("") }} style={{ display: clearChatSearchVisible ? "block" : "none" }} />
                         </div>
 
                         <img src={require("./icons/filters.png")} alt="" id='filter' />
@@ -138,7 +225,7 @@ const Main = () => {
                         {
                             chatList.map(
                                 (chat) => (
-                                    <Chat key={chat.id} name={chat.name} img={chat.img} />
+                                    <Chat key={chat.id} img={chat.img} name={chat.name} />
                                 )
                             )
                         }

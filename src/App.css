@@ -279,6 +279,19 @@
   align-self: center;
 }
 
+#chat {
+  height: 12.2%;
+}
+
 #profileImg {
-  width: 15%;
+  /* width: 15%; */
+  border: 1px solid black;
+}
+
+#profileImg img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  /* pdng */
 }
