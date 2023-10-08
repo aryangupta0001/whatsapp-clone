@@ -284,14 +284,21 @@
 }
 
 #profileImg {
-  /* width: 15%; */
-  border: 1px solid black;
+  aspect-ratio: 1.1/1;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+#profileImg div {
+  height: 75%;
+  width: 75%;
+  background-color: #00a884;
 }
 
 #profileImg img {
-  display: block;
-  margin: auto;
-  max-width: 100%;
-  max-height: 100%;
-  /* pdng */
+  border-radius: 50%;
+  max-height: 75%;
+  max-width: 75%;
+  /* margin: auto; */
+  margin-left: 11%;
 }

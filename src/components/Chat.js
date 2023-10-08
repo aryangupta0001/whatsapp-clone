@@ -3,14 +3,9 @@ import React, { useContext, useEffect } from 'react';
 
 
 const Chat = (props) => {
-
-    useEffect(() => {
-        const profileImg = document.getElementById("profileImg");
-        profileImg.style.width = profileImg.offsetHeight;
-    }, [])
     return (
         <div id='chat' className='flex'>
-            <div id="profileImg" >
+            <div id="profileImg" className='flexVCenter' >
                 <img src={props.img} alt="" className='h100' />
             </div>
 
