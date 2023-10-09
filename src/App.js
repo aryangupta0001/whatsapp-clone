@@ -6,10 +6,8 @@ import Main from './components/Main';
 function App() {
   return (
     <>
-      {/* <State> */}
-        <Backgorund />
-        <Main />
-      {/* </State> */}
+      <Backgorund />
+      <Main />
     </>
   );
 }

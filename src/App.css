@@ -199,10 +199,11 @@
   width: 81.5%;
   font-size: 17px;
   justify-content: left;
-  border-bottom: 1px solid rgb(233, 237, 239);
+  /* border-bottom: 1px solid rgb(233, 237, 239); */
 }
 
 #chats {
+  position: relative;
   height: 79.3%;
   overflow-y: scroll;
 }
@@ -301,4 +302,8 @@
   max-width: 75%;
   /* margin: auto; */
   margin-left: 11%;
+}
+
+#chat>div+div {
+  border-top: 1px solid rgb(233, 237, 239);
 }

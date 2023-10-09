@@ -4,10 +4,6 @@ import Chat from './Chat';
 
 const Main = () => {
 
-    // const context = useContext(Context);
-
-    // const { setChatImg } = context;
-
     const [chatSearch, setChatSearch] = useState("");
     const [clearChatSearchVisible, setClearChatSearchVisible] = useState(false);
 
@@ -143,7 +139,6 @@ const Main = () => {
                             Archived
                         </div>
                     </div>
-
                     <div id="chats" className='pointer w100'>
                         {
                             chatList.map(
