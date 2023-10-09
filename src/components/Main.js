@@ -27,73 +27,85 @@ const Main = () => {
         {
             id: 1,
             name: "Abhisek Tamang",
-            img: "/assets/images/chats/Abhisek Tamang.jpg"
+            img: "/assets/images/chats/Abhisek Tamang.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 2,
             name: "ANDREW LINDER",
-            img: "/assets/images/chats/ANDREW LINDER.jpg"
+            img: "/assets/images/chats/ANDREW LINDER.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 3,
             name: "Jonah Hill",
-            img: "/assets/images/chats/Jonah Hill.jpg"
+            img: "/assets/images/chats/Jonah Hill.jpg",
+            lastMessage: "Hey ! AryanAryanAryanAryan AryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanAryanA"
         },
 
         {
             id: 4,
             name: "Chris Evans",
-            img: "/assets/images/chats/Chris Evans.jpg"
+            img: "/assets/images/chats/Chris Evans.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 5,
             name: "Sandeep Nainwal",
-            img: "/assets/images/chats/Sandeep Nainwal.jpg"
+            img: "/assets/images/chats/Sandeep Nainwal.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 6,
             name: "Michael",
-            img: "/assets/images/chats/Michael.jpg"
+            img: "/assets/images/chats/Michael.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 7,
             name: "Johnny Depp",
-            img: "/assets/images/chats/Johnny Depp.jpg"
+            img: "/assets/images/chats/Johnny Depp.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 8,
             name: "Hani Abdel-Warith",
-            img: "/assets/images/chats/Hani Abdel-Warith.jpg"
+            img: "/assets/images/chats/Hani Abdel-Warith.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 9,
             name: "Chris Pratt",
-            img: "/assets/images/chats/Chris Pratt.jpg"
+            img: "/assets/images/chats/Chris Pratt.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 10,
             name: "Ramit Sethi",
-            img: "/assets/images/chats/Ramit Sethi.jpg"
+            img: "/assets/images/chats/Ramit Sethi.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 11,
             name: "Rocco Giannetti",
-            img: "/assets/images/chats/Rocco Giannetti.jpg"
+            img: "/assets/images/chats/Rocco Giannetti.jpg",
+            lastMessage: "Hey ! Aryan"
         },
 
         {
             id: 12,
             name: "Will Smith",
-            img: "/assets/images/chats/Will Smith.jpg"
+            img: "/assets/images/chats/Will Smith.jpg",
+            lastMessage: "Hey ! Aryan"
         }
 
 
@@ -130,20 +142,20 @@ const Main = () => {
 
                     </div>
 
-                    <div id="archived" className='flexVCenter w100 pointer'>
-                        <div className='flexCenter h100'>
-                            <img src={require("./icons/archived.png")} alt="" />
-                        </div>
-
-                        <div className='flexVCenter h100 fFamily1'>
-                            Archived
-                        </div>
-                    </div>
                     <div id="chats" className='pointer w100'>
+                        <div id="archived" className='flexVCenter w100 pointer'>
+                            <div className='flexCenter h100'>
+                                <img src={require("./icons/archived.png")} alt="" />
+                            </div>
+
+                            <div className='flexVCenter h100 fFamily1'>
+                                Archived
+                            </div>
+                        </div>
                         {
                             chatList.map(
                                 (chat) => (
-                                    <Chat key={chat.id} img={chat.img} name={chat.name} />
+                                    <Chat key={chat.id} img={chat.img} name={chat.name} lastMessage={chat.lastMessage} />
                                 )
                             )
                         }

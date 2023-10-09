@@ -60,6 +60,11 @@
   display: flex;
 }
 
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
 .flexVCenter {
   display: flex;
   align-items: center;
@@ -184,7 +189,8 @@
 
 
 #archived {
-  height: 6%;
+  /* height: 6%; */
+  height: 7.033%;
 }
 
 #archived>div {
@@ -204,10 +210,19 @@
 
 #chats {
   position: relative;
-  height: 79.3%;
+  height: 85.3%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
+#chats::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+}
+
+#chats::-webkit-scrollbar-thumb {
+  background-color: rgba(206, 208, 209, 255);
+}
 
 #messageSecWall {
   border-left: 1px solid rgb(233, 237, 239);
@@ -281,13 +296,16 @@
 }
 
 #chat {
-  height: 12.2%;
+  height: 11.341%;
+}
+
+#chat:hover {
+  background-color: rgba(245, 246, 246, 255);
 }
 
 #profileImg {
   aspect-ratio: 1.1/1;
   box-sizing: border-box;
-  /* border: 1px solid black; */
 }
 
 #profileImg div {
@@ -300,10 +318,18 @@
   border-radius: 50%;
   max-height: 75%;
   max-width: 75%;
-  /* margin: auto; */
   margin-left: 11%;
 }
 
 #chat>div+div {
   border-top: 1px solid rgb(233, 237, 239);
+}
+
+#lastMsg {
+  font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu, Cantarell, Fira Sans, sans-serif;
+  color: rgb(102, 119, 129);
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

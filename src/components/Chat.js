@@ -19,12 +19,12 @@ const Chat = (props) => {
                 <img src={props.img} alt="" className='h100' />
             </div>
 
-            <div id='chatName'>
+            <div id='chatDetail' className='flexCol flexHCenter'>
                 <div id="chatName">
                     {props.name}
                 </div>
                 <div id="lastMsg">
-
+                    {props.lastMessage}
                 </div>
             </div>
         </div>
