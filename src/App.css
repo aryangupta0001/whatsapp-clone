@@ -40,7 +40,7 @@
 
 
 .fFamily1 {
-  --font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
 }
 
 
@@ -120,7 +120,6 @@
 }
 
 #topNav {
-  box-sizing: border-box;
   height: 8%;
   justify-content: space-between;
   padding: 0 3%;
@@ -189,7 +188,6 @@
 
 
 #archived {
-  /* height: 6%; */
   height: 7.033%;
 }
 
@@ -205,7 +203,6 @@
   width: 81.5%;
   font-size: 17px;
   justify-content: left;
-  /* border-bottom: 1px solid rgb(233, 237, 239); */
 }
 
 #chats {
@@ -256,7 +253,7 @@
 }
 
 #getAppBtn {
-  font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu, Cantarell, Fira Sans, sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 8px;
@@ -301,6 +298,7 @@
 
 #chat:hover {
   background-color: rgba(245, 246, 246, 255);
+  border: none;
 }
 
 #profileImg {
@@ -326,7 +324,7 @@
 }
 
 #lastMsg {
-  font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu, Cantarell, Fira Sans, sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
   color: rgb(102, 119, 129);
   font-size: 14px;
   overflow: hidden;
